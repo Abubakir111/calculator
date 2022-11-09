@@ -1,98 +1,104 @@
-let btndis =  ["0","1","2","3","4","5","6","7","8","9","."];
-let action = ["-","+","x","/"];
-let sum ;
-let a = "";
-let b = "";
-let sign = "";
-let finish = "=";
-let display = document.querySelector(".val");
-let btnClear = document.querySelector(".ac");
+let nuber = ["1","2","3","4","5","6","7","8","0","0",".",];
+let addition_and_subtraction = ["+","-","/","*"];
+let tim_number = "";
+let a =[];
+let b;
+let history = document.querySelector(".history");
 let btnContent = document.querySelector(".btnContent");
+let display = document.querySelector(".val");
+let target;
 
-btnClear.addEventListener("click",()=>cleardisplay());
+btnContent.addEventListener("click",(event)=>{ 
 
-function cleardisplay(){
+  target = event.target.dataset.type;
+  
+   if(["1","2","3","4","5","6","7","8","0","0",".",].includes(target)){
 
-     a = "";
-     b = "";
-     sign = ""; 
-     display.textContent = "";
+    if(target == "." && tim_number ==""){
+
+          tim_number = tim_number + "0.";
+          display.innerHTML = tim_number;
+          console.log(tim_number);
+
+   }else if(target == "." && /\./.test(tim_number) && !tim_number == ""){
+
+          tim_number = tim_number ;
+        //  console.l og(tim_number);
+      }else if( a== "") {
+
+          tim_number = tim_number + target;
+          console.log(tim_number);
+          display.innerHTML = tim_number;
+      }
+
+   } 
+   operation(target);
+   the_second_number(target);
+   mathematical_result (target);
+   });
+
+function  operation(data){
+if(["+","-","/","*"].includes(data) && !tim_number == ""){
+  display.innerHTML += data;
+
+  a.push(tim_number);
+  tim_number = "";
+  tim_number = tim_number + data;
+  a.push(tim_number);
+  console.log(a);
+  for(let i = 0; i < a.length; i++){
+    history.innerHTML = a[0]+a[1];  
+  }
+  tim_number = "";
+  console.log("this" ,tim_number);
+}
 
 }
-btnContent.addEventListener("click",(event)=>{
-    if(!event.target.classList.contains("btn")) return;
-    if(event.target.classList.contains("ac")) return;
-    display.textContent = "";
-    const key = event.target.textContent;
+function the_second_number(data){
+ if(target >= 0){
+  for(let i = 0; i < a.length; i++){
+    if( !a[1] == ""){
 
-    if(btndis.includes(key)){
-
-        if(b == "" && sign == ""){
-
-            a += key;
-            console.log("a-",a); 
-            display.textContent = a;
-
-        }else if(!sign == "" && !a == ""){
-  
-           b +=key;
-           console.log(" b-",b);
-           display.textContent = b;
-       
-        } 
- 
+      tim_number =  tim_number + data;
+      display.innerHTML =  tim_number;
+      console.log(tim_number);
+      break;
     }
-    if(action.includes(key)){
-    
-          sign = key;
-          console.log("sum",sign);
-          display.textContent = sign;
-          return;
-    }
-    if(finish.includes(key)){
- 
-       if(key == "="){
 
-            if(!a == "" && b == "" && sign == ""){
- 
-                 a =   parseInt(a) + parseInt(a);
-                 display.textContent = a;
-                
+  }
+ }
+ }
 
-            }
-            if(!a =="" && !b == "" && !sign == ""){
-                 
-                switch(sign){
-
-                    case "-": a = a-b;
-                             display.textContent = a;
-                             b = "";
-                             break;
-
-                    case "+": a = parseInt(a) + parseInt(b);
-                              display.textContent = a;
-                              b = "";
-                              console.log(b);
-                              break;
-
-                    case "x": a = parseInt(a) * parseInt(b);
-                              display.textContent = a;
-                              b = "";
-                              break;
-
-                    case "/": a = parseInt(a)/parseInt(b);
-                             display.textContent = a;
-                             b = "";
-                             break;
-
-                }
-
-            }
-        }
-    }
-    if(!finish == "" && !sign == ""){
+ function mathematical_result (data){
+  if (data == "="){
+    for(i = 0;  i < a.length; i++){
+     
+      if(!a[0]== "" && !a[1] == ""){
         
-    }
-  
-});
+        a.push(tim_number);
+        history.innerHTML += tim_number;
+        
+        for(let i = 0; i < a.length; i++){
+            
+          switch(a[1]){
+           case "+": b = parseFloat(a[0]) + parseFloat(a[2]);
+                   display.innerHTML = b;
+                   break;
+           case "-":b = parseFloat(a[0]) - parseFloat(a[2]); 
+                    display.innerHTML = b;
+                    break;
+           case "*": b = parseFloat(a[0]) * parseFloat(a[2]);
+                    display.innerHTML = b;
+                    break;
+            case "/":b = parseFloat(a[0]) / parseFloat(a[2]); 
+                     display.innerHTML = b;
+                     break;                
+          }
+        }
+        console.log(a);
+        break;
 
+      }
+    }
+  }
+ }

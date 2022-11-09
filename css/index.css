@@ -74,6 +74,9 @@ margin-bottom: 15px;
 .orange{
     background: #b8902a;
 }  
+.btnDelit{
+    background: rgb(28, 214, 198);
+}
 
      @media screen and (min-width:320px) and (max-width:400px) {
         body{ 
@@ -115,12 +118,16 @@ margin-bottom: 15px;
                  color: #8fa4ac; 
                  padding-right: none;
                  border-radius: 2px solid red;
+             }
+             .history{
+                font-size: 1.5em;
+                padding-right: 10px;
              }  
              .val{
                  width: 100%;
                  height: 60%;
-                 font-size: 4.0em;
-                 line-height: 150px;
+                 font-size: 2.0em;
+                 line-height: 100px;
                  border: none;
                  padding-right: 20px;
                  /* border-radius: 20px; */
@@ -148,6 +155,9 @@ margin-bottom: 15px;
                  margin: 6% 3% 0% 2%;
                  float: left;
              }
+             .btnDelit{
+                background: rgb(28, 214, 198);
+            }
              .btnNul{
                  width: 44%;
                  height: 14%;
