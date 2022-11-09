@@ -7,6 +7,7 @@ let history = document.querySelector(".history");
 let btnContent = document.querySelector(".btnContent");
 let display = document.querySelector(".val");
 let target;
+ let tim_mas;
 
 btnContent.addEventListener("click",(event)=>{ 
 
@@ -35,6 +36,7 @@ btnContent.addEventListener("click",(event)=>{
    operation(target);
    the_second_number(target);
    mathematical_result (target);
+   delet (target);
    });
 
 function  operation(data){
@@ -102,3 +104,38 @@ function the_second_number(data){
     }
   }
  }
+
+ function delet (data){
+   if(data == "delete"){
+   
+     if(!tim_number == ""){
+     
+      tim_number = tim_number.substring(0,tim_number.length-1);
+      display.innerHTML = tim_number;
+
+      }else if(data == "delete"){
+
+              for(let i = 0; i < a.length; i ++){
+                 
+               if(a.length == 1 ){
+                 
+                a.splice(0);
+                history.innerHTML = a;
+                console.log(a);
+
+              } else   if(!a[0] == "" && !a[1] == ""){
+                  a.splice(1);
+                  console.log(a);
+                  history.innerHTML = a;
+                  
+
+                }
+                else if(!a[0] == "" && !a[1] == "" && !a[3] == ""){
+                   a.splice(2);
+                }
+              }
+      }
+    
+   }
+ 
+  }
