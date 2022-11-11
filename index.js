@@ -23,8 +23,5 @@ value = event.target.innerText;
           result.innerText +=value;
 
     }
-    if(his.tes(/\"+"\"-"\"*"\""\/g.)){
-      console.log("this");
     
-    }
 });
