@@ -79,7 +79,14 @@ margin-bottom: 15px;
 }
 
      @media screen and (min-width:320px) and (max-width:400px) {
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+        }
+       
         body{ 
+            margin: 0px;
+            padding: 0px;
              width: 100%;
              height: 100vh;
              background: #fff;
@@ -94,8 +101,7 @@ margin-bottom: 15px;
              font-size: 2em;
              color: rgb(240, 229, 240);
              display: block;
-             /* padding-top: 10px; */
-             /* border: 1px solid red; */
+             margin: 0px;
              box-shadow: 0px;
          }
          
@@ -104,21 +110,13 @@ margin-bottom: 15px;
                 border:none;
                 border-radius: 20px ;
                 width: 100%;
-                height: 30%;
+                height: 23%;
                 display: block;
                 padding-right: none;
                 text-align: end; 
                 margin-bottom: none;
               }
-              .made{
-                 width: 100%;
-                 height: 35%;
-                 font-size: -2em;
-                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                 color: #8fa4ac; 
-                 padding-right: none;
-                 border-radius: 2px solid red;
-             }
+          
              .history{
                 font-size: 1.5em;
                 padding-right: 10px;
@@ -127,7 +125,7 @@ margin-bottom: 15px;
              }  
              .val{
                  width: 100%;
-                 height: 60%;
+                 height: 50%;
                  font-size: 2.0em;
                  line-height: 100px;
                  border: none;
@@ -136,6 +134,44 @@ margin-bottom: 15px;
                  /* border-radius: 20px; */
                  
               }
+              .h1{
+                text-align: center;
+                color: #60696abd;
+                font-size: 1.2em;
+                display:   none;
+              }
+              .histroylist{
+                width: 100%;
+                height: 80vh;
+                color: rgb(163, 151, 169);
+                font-size: 1.2em;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                padding-right: 10px;
+                display: none;
+                position: relative;
+                   
+              }
+              .histroylist li{
+                width: 100%;
+                height: 90px;
+                text-align: end; 
+              }
+             .histroylist span{
+                text-align: end;
+ 
+             }
+             .btnback{
+                width: 200px;
+                height: 60px;
+                position: absolute;
+                bottom: 30px;
+                right: 20px;
+                font-size: 1.1em;
+                border-radius: 10px;
+                background:#2f3030;
+                color: #fff;
+                display: none;
+             }
  
              .btnContent {  
                  border: none;
@@ -157,9 +193,34 @@ margin-bottom: 15px;
                  user-select: none;
                  margin: 6% 3% 0% 2%;
                  float: left;
+                
              }
-             .btnDelit{
-                background: rgb(28, 214, 198);
+             .btn_history{
+                width: 95%;
+                height: 13%;
+                border-radius: 5%;
+                background:#2f3030;
+                text-align: center;
+                line-height: 140%;
+                cursor: pointer;
+                font-size: 1.3em;
+                user-select: none;
+                margin: 6% 3% 0% 2%;
+                float: left;
+            }
+             .btn_d{
+                width: 20%;
+                height: 14%;
+                border-radius: 50%;
+                background:#2f3030;
+                text-align: center;
+                line-height: 140%;
+                cursor: pointer;
+                font-size: 1.2em;
+                user-select: none;
+                margin: 6% 3% 0% 2%;
+                float: left;
+               
             }
              .btnNul{
                  width: 44%;
