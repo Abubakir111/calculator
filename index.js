@@ -40,33 +40,33 @@ bloc_btn.addEventListener("click",(event)=>{
             result.innerText +=value;
 
     }
-       if(result.innerText.length == 14){
+       if(result.innerText.length == 11){
           result.style. fontSize =  "1.7em";
-          result.style.lineHeight = "45px";
+          result.style.lineHeight = "101px";
        }
-       if(result.innerText.length == 15){
+       if(result.innerText.length == 12){
          result.style. fontSize =  "1.6em";
-         result.style.lineHeight = "45px";
+         result.style.lineHeight = "101px";
+        }
+        if(result.innerText.length == 13){
+         result.style. fontSize =  "1.5em";
+         result.style.lineHeight = "101px";
+        }
+        if(result.innerText.length == 14){
+         result.style. fontSize =  "1.4em";
+         result.style.lineHeight = "101px";
+        }
+        if(result.innerText.length == 15){
+         result.style. fontSize =  "1.3em";
+         result.style.lineHeight = "101px";
         }
         if(result.innerText.length == 16){
-         result.style. fontSize =  "1.5em";
-         result.style.lineHeight = "45px";
-        }
-        if(result.innerText.length == 17){
-         result.style. fontSize =  "1.4em";
-         result.style.lineHeight = "45px";
-        }
-        if(result.innerText.length == 18){
-         result.style. fontSize =  "1.3em";
-         result.style.lineHeight = "45px";
-        }
-        if(result.innerText.length == 19){
          result.style. fontSize =  "1.2em";
-         result.style.lineHeight = "45px";
+         result.style.lineHeight = "101px";
         }
        
         
-         if(result.innerText.length == 13){
+         if(result.innerText.length < 10){
          display.style.color = "#fff";
          result.style. fontSize =  "1.8em";
         }
@@ -81,11 +81,11 @@ bloc_btn.addEventListener("click",(event)=>{
      
   });
   btn_back.addEventListener("click",()=>{
-   bloc_btn.style.display = "block";
-   display.style.display = "block";
-   histroylist.style.display = "none";
-   h1.style.display =  "none";
-   btn_back.style.display = "none";
+         bloc_btn.style.display = "block";
+         display.style.display = "block";
+         histroylist.style.display = "none";
+         h1.style.display =  "none";
+         btn_back.style.display = "none";
   });
 
  

@@ -31,14 +31,17 @@ position: relative;
 }
 
 .val{
-    width: 100%;
+    width: 90%;
     height: 35px;
     overflow: hidden;
     font-size: 1.8em;
     border: none;
     top: 60%;
+    left: 10px;
+    right: 10px;
     padding-right: 20px;
-    /* background:blue; */
+    margin-left: none;
+    background:blue;
     position: absolute;   
 }
 .btnContent {
@@ -160,15 +163,17 @@ position: relative;
                 /* border: 2px solid brown; */
              }  
              .val{
-                 width: 100%;
+                 width: 95%;
                  height: 50%;
                  overflow-x: scroll;
                  font-size: 2.0em;
                  line-height: 100px;
                  border: none;
-                 padding-right: 20px;
-                 background: none;
-                 overflow: hidden;
+                 padding-right: none;
+                 padding-left: none;
+                 background:none;
+                 margin-left: 10px;
+               
                  /* border-radius: 20px; */
                  
               }
@@ -197,6 +202,9 @@ position: relative;
               }
              .histroylist span{
                 text-align: end;
+                
+             }
+             li{
                 overflow: hidden;
              }
              .btnback{
