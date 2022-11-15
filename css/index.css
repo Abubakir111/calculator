@@ -6,6 +6,7 @@ body{
     background: rgb(239, 239, 239);
     margin: 0px;
     padding: 0px;
+   
 }
 
 .calc {
@@ -37,7 +38,7 @@ position: relative;
     border: none;
     top: 60%;
     padding-right: 20px;
-    background:none;
+    /* background:blue; */
     position: absolute;   
 }
 .btnContent {
@@ -75,6 +76,7 @@ position: relative;
     font-size: 0.8em;
 
 } 
+
 .hisContent{
     display: none;
 }
@@ -153,6 +155,7 @@ position: relative;
                 font-size: 1.5em;
                 padding-top: 20px;
                 padding-right: 10px;
+                overflow:hidden;
                 color: rgb(235, 229, 229);
                 /* border: 2px solid brown; */
              }  
@@ -194,6 +197,7 @@ position: relative;
               }
              .histroylist span{
                 text-align: end;
+                overflow: hidden;
              }
              .btnback{
                 width: 200px;
