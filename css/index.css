@@ -35,15 +35,13 @@ position: relative;
 .val{
     width: 100%;
     height: 35px;
+    overflow: hidden;
     font-size: 1.8em;
     border: none;
     top: 60%;
     padding-right: 20px;
     background:none;
-    position: absolute;
-    
-  
-    
+    position: absolute;   
 }
 .btnContent {
     border: none;
@@ -160,13 +158,13 @@ position: relative;
              .val{
                  width: 100%;
                  height: 50%;
+                 overflow-x: scroll;
                  font-size: 2.0em;
                  line-height: 100px;
                  border: none;
                  padding-right: 20px;
                  background: none;
-                 
-                 
+                 overflow: hidden;
                  /* border-radius: 20px; */
                  
               }
@@ -180,6 +178,7 @@ position: relative;
               .histroylist{
                 width: 100%;
                 height: 80vh;
+                overflow-y: scroll;
                 color: rgb(163, 151, 169);
                 font-size: 1.2em;
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
