@@ -9,9 +9,9 @@ body{
 }
 
 .calc {
-    width: 20%;
-    height: 60vh; 
-    border-radius: 20px;
+    width: 23%;
+    height: 74vh; 
+    border-radius: 10px;
     background: black;
     box-shadow: 10px 10px 5px 1px gray;
     margin:  auto;
@@ -26,6 +26,7 @@ height: 20%;
 display: block;;
 text-align: end;
 margin-bottom: 15px;
+position: relative;
 }
 .made{
     padding-right: 20px;
@@ -36,26 +37,48 @@ margin-bottom: 15px;
     height: 35px;
     font-size: 1.8em;
     border: none;
+    top: 60%;
     padding-right: 20px;
+    background:none;
+    position: absolute;
+    
+  
     
 }
 .btnContent {
     border: none;
     margin: auto;
-    width: 95%;
-    height: 70%;
+    width: 100%;
+    height: 71%;
+    border-radius: 2px;
+    background: none;
+    font-size: 1.4em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 0px;
+    padding-left: 1px;
+}
+.btnback{
+    display: none;
 }
 .btn{
-    width: 35px;
-    height: 35px;
+    width: 19%;
+    height: 18%;
     border-radius: 50%;
     background:#2f3030;
     text-align: center;
-    line-height: 38px;
+    line-height: 45px;
     cursor: pointer;
+    font-size: none;
     user-select: none;
-    margin: 3px 2px 3px 12px;
+    margin: 3px 2px 3px 9px;
     float: left;
+}
+.division_symbol{
+    font-size: 0.8em;
+
+} 
+.hisContent{
+    display: none;
 }
 .btn:hover{
     filter: brightness(80%);
@@ -64,12 +87,16 @@ margin-bottom: 15px;
     filter: brightness(60%);
 }
 .btnNul{
-    width: 82px;
-    height: 35px;
-    border-radius: 10px
+    width: 43%;
+    height: 17%;
+    border-radius: 25px
 }
 .lightGrey{
-    background:#b0b0b0;
+    background:#bbbaba;
+    color: #232424;
+    font-size: 1em;
+    line-height: 41px;
+    font-weight: bold;
 }
 .orange{
     background: #b8902a;
@@ -77,6 +104,10 @@ margin-bottom: 15px;
 .btnDelit{
     background: rgb(28, 214, 198);
 }
+.x{
+    line-height: 50px;
+}
+
 
      @media screen and (min-width:320px) and (max-width:400px) {
         *{
@@ -133,6 +164,7 @@ margin-bottom: 15px;
                  line-height: 100px;
                  border: none;
                  padding-right: 20px;
+                 background: none;
                  
                  
                  /* border-radius: 20px; */
@@ -181,7 +213,10 @@ margin-bottom: 15px;
                  margin: auto;
                  width: 95%;
                  height: 67vh;  
+                 font-size: none;
+                 background: none;
              }
+        
               .btn{
                  width: 20%;
                  height: 14%;
@@ -190,20 +225,21 @@ margin-bottom: 15px;
                  text-align: center;
                  line-height: 150%;
                  cursor: pointer;
-                 font-size: 1.5em;
+                 font-size: 1.1em;
                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                  user-select: none;
                  margin: 6% 3% 0% 2%;
                  float: left;
                 
              }
+             
              .btn_history{
                 width: 95%;
                 height: 13%;
                 border-radius: 30px;
                 background:#2f3030;
                 text-align: center;
-                line-height: 140%;
+                line-height: 110%;
                 cursor: pointer;
                 font-size: 1.3em;
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -232,7 +268,9 @@ margin-bottom: 15px;
                  padding-left: 30px;
                  border-radius: 30px 
              }
-     
+             .hisContent{
+                display: block;
+             }
              .btn:hover{
                  filter: brightness(80%);
              }
@@ -243,18 +281,23 @@ margin-bottom: 15px;
              .lightGrey{
                  background:#bbbaba;
                  color: #232424;
-                 font-size: 1em;
+                 font-size: 0.7em;
                  line-height: 67px;
                  font-weight: bold;
              }
              .orange{
                  background: #e1a713;
                  line-height: 67px;
+                 font-size: 1em;
              } 
              .x{
-                transform: rotate(90deg);
-                font-size: 1.3em;
+                line-height: 85px;
              }
+             .division_symbol{
+                font-size: 0.8em;
+            
+            }
+            
  
       } 
 
