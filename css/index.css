@@ -118,9 +118,12 @@ margin-bottom: 15px;
               }
           
              .history{
+                width: 100%;
+                height: 80px;
                 font-size: 1.5em;
+                padding-top: 20px;
                 padding-right: 10px;
-                color: #fff;
+                color: rgb(235, 229, 229);
                 /* border: 2px solid brown; */
              }  
              .val{
@@ -131,6 +134,7 @@ margin-bottom: 15px;
                  border: none;
                  padding-right: 20px;
                  
+                 
                  /* border-radius: 20px; */
                  
               }
@@ -138,6 +142,7 @@ margin-bottom: 15px;
                 text-align: center;
                 color: #60696abd;
                 font-size: 1.2em;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 display:   none;
               }
               .histroylist{
@@ -148,8 +153,7 @@ margin-bottom: 15px;
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 padding-right: 10px;
                 display: none;
-                position: relative;
-                   
+                position: relative;    
               }
               .histroylist li{
                 width: 100%;
@@ -158,7 +162,6 @@ margin-bottom: 15px;
               }
              .histroylist span{
                 text-align: end;
- 
              }
              .btnback{
                 width: 200px;
@@ -167,7 +170,7 @@ margin-bottom: 15px;
                 bottom: 30px;
                 right: 20px;
                 font-size: 1.1em;
-                border-radius: 10px;
+                border-radius: 20px;
                 background:#2f3030;
                 color: #fff;
                 display: none;
@@ -177,9 +180,7 @@ margin-bottom: 15px;
                  border: none;
                  margin: auto;
                  width: 95%;
-                 height: 67vh;
-                 /* border-radius: 2px solid red; */
-                
+                 height: 67vh;  
              }
               .btn{
                  width: 20%;
@@ -187,9 +188,10 @@ margin-bottom: 15px;
                  border-radius: 50%;
                  background:#2f3030;
                  text-align: center;
-                 line-height: 140%;
+                 line-height: 150%;
                  cursor: pointer;
                  font-size: 1.5em;
+                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                  user-select: none;
                  margin: 6% 3% 0% 2%;
                  float: left;
@@ -198,12 +200,13 @@ margin-bottom: 15px;
              .btn_history{
                 width: 95%;
                 height: 13%;
-                border-radius: 5%;
+                border-radius: 30px;
                 background:#2f3030;
                 text-align: center;
                 line-height: 140%;
                 cursor: pointer;
                 font-size: 1.3em;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 user-select: none;
                 margin: 6% 3% 0% 2%;
                 float: left;
@@ -225,7 +228,9 @@ margin-bottom: 15px;
              .btnNul{
                  width: 44%;
                  height: 14%;
-                 border-radius: 10px 
+                 text-align: left;
+                 padding-left: 30px;
+                 border-radius: 30px 
              }
      
              .btn:hover{
@@ -236,11 +241,20 @@ margin-bottom: 15px;
              }
      
              .lightGrey{
-                 background:#b0b0b0;
+                 background:#bbbaba;
+                 color: #232424;
+                 font-size: 1em;
+                 line-height: 67px;
+                 font-weight: bold;
              }
              .orange{
-                 background: #b8902a;
+                 background: #e1a713;
+                 line-height: 67px;
              } 
+             .x{
+                transform: rotate(90deg);
+                font-size: 1.3em;
+             }
  
       } 
 

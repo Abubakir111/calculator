@@ -11,16 +11,20 @@ let history = "";
 bloc_btn.addEventListener("click",(event)=>{
   if(!event.target.classList.contains("btn")) return;
       value = event.target.innerText;
-
+         
+      
       switch(value){
          case "C":
             result.innerText =  result.innerText.substring(0,result.innerText.length-1);
             result.innerText = result.innerText;
-            break;
-         case "AC":
-            result.innerText = "";
+            
+            if(result.innerText == "" && !his.innerText == ""){
+               result.innerText = his.innerText;
+               his.innerText = "";
+            }
             break;
          case "=":
+            his.style.color = "rgb(143, 139, 139)"
             his.innerText = result.innerText ;
             result.innerText = eval(result.innerText);
             history  += `
