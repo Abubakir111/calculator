@@ -1,13 +1,22 @@
-let bloc_btn = document.querySelector(".btnContent");
-let result = document.querySelector(".val");
-let his = document.querySelector(".history");
-let histroylist = document.querySelector(".histroylist");
-let btn_history = document.querySelector(".btn_history ");
-let h1 = document.querySelector(".h1");
-let btn_back = document.querySelector(".btnback");
-let display = document.querySelector(".display");
-let value;
-let history = "";
+
+import { alerttik ,wit } from "./chrom_calc/index.js"
+if(window.innerWidth > 500){
+alerttik();
+}
+
+if(window.innerWidth < 500){
+
+   let bloc_btn = document.querySelector(".btnContent");
+   let result = document.querySelector(".val");
+   let his = document.querySelector(".history");
+   let histroylist = document.querySelector(".histroylist");
+   let btn_history = document.querySelector(".btn_history ");
+   let h1 = document.querySelector(".h1");
+   let btn_back = document.querySelector(".btnback");
+   let display = document.querySelector(".display");
+   let value;
+   let history = "";
+
 
 bloc_btn.addEventListener("click",(event)=>{
   if(!event.target.classList.contains("btn")) return;
@@ -24,7 +33,6 @@ bloc_btn.addEventListener("click",(event)=>{
             }
             break;
          case "=":
-            his.style.color = "rgb(143, 139, 139)"
             his.innerText = result.innerText ;
             result.innerText = eval(result.innerText);
             history  += `
@@ -89,5 +97,4 @@ bloc_btn.addEventListener("click",(event)=>{
   });
 
  
-  
-
+}

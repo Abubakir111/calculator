@@ -1,9 +1,11 @@
+@media screen and (min-width:401px) and (max-width:1700px) {
+
 *{
     box-sizing: border-box;
     margin: 0px;
 }
 body{
-    background: rgb(239, 239, 239);
+    background: rgb(248, 246, 246);
     margin: 0px;
     padding: 0px;
    
@@ -20,14 +22,22 @@ body{
     
 }
 .display {
-border:none; 
-border-radius: 20px ;
-width: 100%;
-height: 20%;
-display: block;;
-text-align: end;
-margin-bottom: 15px;
-position: relative;
+    border:none; 
+    border-radius: 20px ;
+    width: 100%;
+    height: 20%;
+    display: block;;
+    text-align: end;
+    margin-bottom: 15px;
+    padding-top:8px ;
+    position: relative;
+}
+.history{
+    width: 95%;
+    height: 30px;
+    margin-left: 5px;
+    font-size: 1.3em;
+    background: none;
 }
 
 .val{
@@ -41,7 +51,7 @@ position: relative;
     right: 10px;
     padding-right: 20px;
     margin-left: none;
-    background:blue;
+    background:none;
     position: absolute;   
 }
 .btnContent {
@@ -97,7 +107,7 @@ position: relative;
 .lightGrey{
     background:#bbbaba;
     color: #232424;
-    font-size: 1em;
+    font-size: 0.8em;
     line-height: 41px;
     font-weight: bold;
 }
@@ -110,208 +120,208 @@ position: relative;
 .x{
     line-height: 50px;
 }
+}
 
+@media screen and (min-width:320px) and (max-width:400px) {
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
 
-     @media screen and (min-width:320px) and (max-width:400px) {
-        *{
-            box-sizing: border-box;
-            margin: 0px;
-        }
-       
-        body{ 
-            margin: 0px;
-            padding: 0px;
-             width: 100%;
-             height: 100vh;
-             background: #fff;
- 
-        }
-         .calc {
-             width: 100%;
-             height: 100vh;
-             border-radius: 0px;
-             background: rgb(34, 34, 34);
-             text-align: center;
-             font-size: 2em;
-             color: rgb(240, 229, 240);
-             display: block;
-             margin: 0px;
-             box-shadow: 0px;
-             position: relative;
-         }
-         
-     
-         .display {
-                border:none;
-                border-radius: 20px ;
-                width: 100%;
-                height: 23%;
-                display: block;
-                padding-right: none;
-                text-align: end; 
-                margin-bottom: none;
-              }
-          
-             .history{
-                width: 100%;
-                height: 80px;
-                font-size: 1.5em;
-                padding-top: 20px;
-                padding-right: 10px;
-                overflow:hidden;
-                color: rgb(235, 229, 229);
-                /* border: 2px solid brown; */
-             }  
-             .val{
-                 width: 95%;
-                 height: 50%;
-                 overflow-x: scroll;
-                 font-size: 2.0em;
-                 line-height: 100px;
-                 border: none;
-                 padding-right: none;
-                 padding-left: none;
-                 background:none;
-                 margin-left: 10px;
-               
-                 /* border-radius: 20px; */
-                 
-              }
-              .h1{
-                text-align: center;
-                color: #60696abd;
-                font-size: 1.2em;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                display:   none;
-              }
-              .histroylist{
-                width: 100%;
-                height: 74vh;
-                overflow-y: scroll;
-                color: rgb(238, 238, 238);
-                font-size: 1.2em;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                padding-right: 10px;
-                display: none;
-                /* position: relative;     */
-              }
-              .histroylist li{
-                width: 100%;
-                height: 90px;
-                text-align: end; 
-              }
-             .histroylist span{
-                text-align: end;
-                
-             }
-             li{
-                overflow: hidden;
-             }
-             .btnback{
-                width: 200px;
-                height: 60px;
-                position: absolute;
-                bottom: 10px;
-                right: 10px;
-                
-                font-size: 1.1em;
-                border-radius: 20px;
-                background:#2f3030;
-                color: #fff;
-                display: none;
-             }
- 
-             .btnContent {  
-                 border: none;
-                 margin: auto;
-                 width: 95%;
-                 height: 67vh;  
-                 font-size: none;
-                 background: none;
-             }
+body{ 
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+    background: rgb(219, 213, 213);
+
+}
+.calc {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0px;
+    background: rgb(34, 34, 34);
+    text-align: center;
+    font-size: 2em;
+    color: rgb(230, 222, 230);
+    display: block;
+    margin: 0px;
+    box-shadow: 0px;
+    position: relative;
+}
+    
+
+.display {
+    border:none;
+    border-radius: 20px ;
+    width: 100%;
+    height: 23%;
+    display: block;
+    padding-right: none;
+    text-align: end; 
+    margin-bottom: none;
+}
+    
+.history{
+    width: 90%;
+    height: 80px;
+    font-size: 1.5em;
+    padding-top: none;
+    padding-right: none;
+    top: 0px;
+    margin: auto;
+    overflow:hidden;
+    /* background: red; */
+    color: rgb(143, 139, 139);
+    /* border: 2px solid brown; */
+}  
+.val{
+    width: 90%;
+    height: 50%;
+    overflow-y: hidden;
+    font-size: 2.0em;
+    line-height: 100px;
+    border: none;
+    top: 0px;
+    padding-right: none;
+    padding-left: none;
+    background:none;
+    margin: auto;
+    border-radius: 20px; 
+    
+}
+.h1{
+    text-align: center;
+    color: #60696abd;
+    font-size: 1.2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display:   none;
+}
+.histroylist{
+    width: 100%;
+    height: 74vh;
+    overflow-y: scroll;
+    color: rgb(238, 238, 238);
+    font-size: 1.2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-right: 10px;
+    display: none;
+    position: relative;     
+}
+.histroylist li{
+    width: 100%;
+    height: 90px;
+    text-align: end; 
+}
+.histroylist span{
+    text-align: end;    
+
+}
+li{
+    overflow: hidden;
+}
+.btnback{
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.1em;
+    border-radius: 20px;
+    background:#2f3030;
+    color: #fff;
+    display: none;
+}
+
+.btnContent {  
+    border: none;
+    margin: auto;
+    width: 95%;
+    height: 67vh;  
+    font-size: none;
+    background: none;
+}
+
+.btn{
+    width: 20%;
+    height: 14%;
+    border-radius: 50%;
+    background:#2f3030;
+    text-align: center;
+    line-height: 195%;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    user-select: none;
+    margin: 6% 3% 0% 2%;
+    float: left;
+
+}
         
-              .btn{
-                 width: 20%;
-                 height: 14%;
-                 border-radius: 50%;
-                 background:#2f3030;
-                 text-align: center;
-                 line-height: 150%;
-                 cursor: pointer;
-                 font-size: 1.1em;
-                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                 user-select: none;
-                 margin: 6% 3% 0% 2%;
-                 float: left;
-                
-             }
-             
-             .btn_history{
-                width: 95%;
-                height: 13%;
-                border-radius: 30px;
-                background:#2f3030;
-                text-align: center;
-                line-height: 110%;
-                cursor: pointer;
-                font-size: 1.3em;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                user-select: none;
-                margin: 6% 3% 0% 2%;
-                float: left;
-            }
-             .btn_d{
-                width: 20%;
-                height: 14%;
-                border-radius: 50%;
-                background:#2f3030;
-                text-align: center;
-                line-height: 140%;
-                cursor: pointer;
-                font-size: 1.2em;
-                user-select: none;
-                margin: 6% 3% 0% 2%;
-                float: left;
-               
-            }
-             .btnNul{
-                 width: 44%;
-                 height: 14%;
-                 text-align: left;
-                 padding-left: 30px;
-                 border-radius: 30px 
-             }
-             .hisContent{
-                display: block;
-             }
-             .btn:hover{
-                 filter: brightness(80%);
-             }
-             .btn:active{
-                 filter: brightness(60%);
-             }
-     
-             .lightGrey{
-                 background:#bbbaba;
-                 color: #232424;
-                 font-size: 0.7em;
-                 line-height: 67px;
-                 font-weight: bold;
-             }
-             .orange{
-                 background: #e1a713;
-                 line-height: 67px;
-                 font-size: 1em;
-             } 
-             .x{
-                line-height: 85px;
-             }
-             .division_symbol{
-                font-size: 0.8em;
-            
-            }
-            
- 
-      } 
+.btn_history{
+    width: 95%;
+    height: 13%;
+    border-radius: 30px;
+    background:#2f3030;
+    text-align: center;
+    line-height: 140%;
+    cursor: pointer;
+    font-size: 1.3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    user-select: none;
+    margin: 6% 3% 0% 2%; 
+    float: left;
+}
+.btn_d{
+    width: 20%;
+    height: 14%;
+    border-radius: 50%;
+    background:#2f3030;
+    text-align: center;
+    line-height: 140%;
+    cursor: pointer;
+    font-size: 1.2em;
+    user-select: none;
+    margin: 6% 3% 0% 2%;
+    float: left;
+        
+}
+.btnNul{
+    width: 44%;
+    height: 14%;
+    text-align: left;
+    padding-left: 30px;
+    border-radius: 30px 
+}
+.hisContent{
+    display: block;
+}
+.btn:hover{
+    filter: brightness(80%);
+}
+.btn:active{
+    filter: brightness(60%);
+}
 
-   
+.lightGrey{
+    background:#bbbaba;
+    color: #232424;
+    font-size: 0.7em;
+    line-height: 67px;
+    font-weight: bold;
+}
+.orange{
+    background: #e1a713;
+    line-height: 67px;
+    font-size: 1em;
+} 
+.x{
+    line-height: 85px;
+}
+.division_symbol{
+    font-size: 0.8em;
+
+}  
+
+} 
+
