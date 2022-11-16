@@ -21,7 +21,7 @@ if(window.innerWidth < 500) mobil_version();
          let display = document.querySelector(".display");
          let value;
          let history = "";
-         let inner_Text = result.innerText;
+         
 
 
       bloc_btn.addEventListener("click",(event)=>{
@@ -70,6 +70,9 @@ if(window.innerWidth < 500) mobil_version();
                          break;
                case "%": if(!result.innerText == "") result.innerText  =  eval(result.innerText)/100; 
                          else    result.innerText = "";
+                         break;
+               case ".": if(result.innerText == "") result.innerText = ""; 
+                         else   result.innerText +=value;
                          break;
                default: result.innerText +=value;
 
