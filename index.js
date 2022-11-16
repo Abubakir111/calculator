@@ -81,8 +81,6 @@ if(window.innerWidth < 500) mobil_version();
       function text_scale(tex , ravno ,numberr, em){
 
          if(tex.innerText.length ,ravno, numberr){
-            
-            result.style.color = "red";
             result.style. fontSize =  em;
             result.style.lineHeight = "101px";
          }
