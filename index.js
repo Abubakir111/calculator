@@ -13,6 +13,7 @@ if(window.innerWidth < 500) mobil_version();
          let bloc_btn = document.querySelector(".btnContent");
          let result = document.querySelector(".val");
          let his = document.querySelector(".history");
+         let bloc_history = document.querySelector(".blcok_history");
          let histroylist = document.querySelector(".histroylist");
          let btn_history = document.querySelector(".btn_history ");
          let h1 = document.querySelector(".h1");
@@ -60,23 +61,15 @@ if(window.innerWidth < 500) mobil_version();
             
                
       });
-      btn_history.addEventListener("click",()=>{
+      btn_history.addEventListener("click",()=> { turn_on_connect_block("none","none","block"); });
 
-            bloc_btn.style.display = "none";
-            display.style.display = "none";
-            histroylist.style.display = "block";
-            h1.style.display =  "block";
-            btn_back.style.display = "block";
-         
-      });
-      btn_back.addEventListener("click",()=>{
+      btn_back.addEventListener("click",()=> { turn_on_connect_block("block","block","none"); });
 
-            bloc_btn.style.display = "block";
-            display.style.display = "block";
-            histroylist.style.display = "none";
-            h1.style.display =  "none";
-            btn_back.style.display = "none";
-      });
+      function turn_on_connect_block(block1,block2,block3){
+            bloc_btn.style.display = block1;
+            display.style.display = block2;
+            bloc_history.style.display = block3;
+      }
 
       function text_scale(tex , ravno ,numberr, em){
 
