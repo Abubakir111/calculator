@@ -5,18 +5,13 @@
 let bloc_btn = document.querySelector(".btnContent");
 let result = document.querySelector(".val");
 let his = document.querySelector(".history");
-let histroylist = document.querySelector(".histroylist");
-let btn_history = document.querySelector(".btn_history ");
-let h1 = document.querySelector(".h1");
-let btn_back = document.querySelector(".btnback");
-let display = document.querySelector(".display");
 let value;
-let history = "";
+
 
         bloc_btn.addEventListener("click",(event)=>{
             if(!event.target.classList.contains("btn")) return;
             value = event.target.innerText;
-        
+          
             switch(value){
                 case "C":
                     result.innerText =  result.innerText.substring(0,result.innerText.length-1);
@@ -30,16 +25,43 @@ let history = "";
                         }
                     break;
                 case "=":
-                    his.style.color = "rgb(143, 139, 139)"
-                    his.innerText = result.innerText ;
-                    result.innerText = eval(result.innerText);
-                    history  += `
-                        <li class="li">${his.innerText}<br>
-                            <span>${result.innerText}</span>
-                        </li>`
-                    histroylist.innerHTML  = history;   
-                    if(his.innerText.length > 12) his.style.fontSize = "0.9em";
+                    if(result.innerText == "")  result.innerText == "";
+                    else{
+
+                        his.style.color = "rgb(143, 139, 139)";
+                        his.innerText = result.innerText ;
+                        result.innerText = eval(result.innerText);  
+                        if(his.innerText.length > 12) his.style.fontSize = "0.9em";
+                    }
                     break;
+                case "+":
+                    if(result.innerText == "") result.innerText = "";
+                    else result.innerText +=value;
+                    break;
+                case "-":
+                    if(result.innerText == "") result.innerText = "";
+                    else result.innerText +=value;
+                    break;
+                case "/":
+                    if(result.innerText == "") result.innerText = "";
+                    else result.innerText +=value;
+                    break;  
+                case "*":
+                    if(result.innerText == "") result.innerText = "";
+                    else result.innerText +=value;
+                    break;
+                case "%":
+                    if(result.innerText == "") result.innerText = "";
+                    else  result.innerText = eval(result.innerText)/100;
+        
+                    break;
+                case ".":
+                    if(result.innerText == "") result.innerText == "";
+                    else result.innerText +=value;
+                    break;
+                case "+/_":
+                    if(result.innerText == "") result.innerText = "-";
+                break;
                 default: result.innerText +=value;
         
             }
@@ -71,6 +93,6 @@ let history = "";
         }
     }
 
-function wit() { alert("функция 2");}
+function wit() { let fun ="функция 2";}
                 
  export{browser_version , wit};

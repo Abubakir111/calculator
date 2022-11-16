@@ -21,6 +21,7 @@ if(window.innerWidth < 500) mobil_version();
          let display = document.querySelector(".display");
          let value;
          let history = "";
+         let inner_Text = result.innerText;
 
 
       bloc_btn.addEventListener("click",(event)=>{
@@ -39,28 +40,61 @@ if(window.innerWidth < 500) mobil_version();
                   }
                   break;
                case "=":
-                     his.innerText = result.innerText ;
-                     result.innerText = eval(result.innerText);
-                     history  += `
-                        <li class="li">${his.innerText}<br>
-                              <span>${result.innerText}</span>
-                        </li>`
-                     histroylist.innerHTML  = history;  
-                     if(his.innerText.length > 12)  his.style.fontSize = "0.9em";  
-                     break;
+                     if(result.innerText == "") result.innerText = "";
+                   
+                     else{
+                      
+                           his.innerText = result.innerText ;
+                           result.innerText = eval(result.innerText);
+                           history  += `
+                              <li class="li">${his.innerText}<br>
+                                    <span>${result.innerText}</span>
+                              </li>`
+                           histroylist.innerHTML  = history;  
+                           if(his.innerText.length > 12)  his.style.fontSize = "0.9em";
+                         }
+                           break;
+               case "+": if(result.innerText == "") result.innerText = "";  
+                         else  result.innerText +=value;
+                         break;
+               case "-": if(result.innerText == "") result.innerText = "";  
+                         else  result.innerText +=value;
+                         break;
+               case "*": if(result.innerText == "") result.innerText = "";  
+                         else  result.innerText +=value;
+                         break;
+               case "/": if(result.innerText == "") result.innerText = "";  
+                         else  result.innerText +=value;
+                         break;
+               case "+/_": if(result.innerText == "") result.innerText = "-";  
+                         break;
+               case "%": if(!result.innerText == "") result.innerText  =  eval(result.innerText)/100; 
+                         else    result.innerText = "";
+                         break;
                default: result.innerText +=value;
 
             }
-            text_scale(result,"==",11,"1.7em");
-            text_scale(result,"==",12,"1.6em");
-            text_scale(result,"==",13,"1.5em");
-            text_scale(result,"==",14,"1.4em");
-            text_scale(result,"==",15,"1.3em");
-            text_scale(result,"<",10,"1.8em");
-
-            
-               
+            text_scale(result,11,"1.7em");
+            text_scale(result,12,"1.6em");
+            text_scale(result,13,"1.5em");
+            text_scale(result,14,"1.4em");
+            text_scale(result,15,"1.3em");
+            text_scale11(result,10,"1.8em");        
       });
+      function text_scale(tex  ,numberr, em){
+
+         if(tex.innerText.length  == numberr){
+            result.style. fontSize =  em;
+            result.style.lineHeight = "101px";
+         }
+      }
+      function text_scale11(tex  ,numberr, em){
+
+         if(tex.innerText.length  < numberr){
+            result.style. fontSize =  em;
+            result.style.lineHeight = "101px";
+         }
+      }
       btn_history.addEventListener("click",()=> { turn_on_connect_block("none","none","block"); });
 
       btn_back.addEventListener("click",()=> { turn_on_connect_block("block","block","none"); });
@@ -71,12 +105,5 @@ if(window.innerWidth < 500) mobil_version();
             bloc_history.style.display = block3;
       }
 
-      function text_scale(tex , ravno ,numberr, em){
-
-         if(tex.innerText.length ,ravno, numberr){
-            result.style. fontSize =  em;
-            result.style.lineHeight = "101px";
-         }
-      }
    }
 
