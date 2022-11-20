@@ -16,13 +16,18 @@ if(window.innerWidth < 500) mobil_version();
          let bloc_history = document.querySelector(".blcok_history");
          let histroylist = document.querySelector(".histroylist");
          let btn_history = document.querySelector(".btn_history ");
+         let btn_clear = document.querySelector(".clearr");
          let h1 = document.querySelector(".h1");
          let btn_back = document.querySelector(".btnback");
          let display = document.querySelector(".display");
+         let ul = document.querySelector(".ul");
+         let resull ;
          let value;
-         let history = "";
-         
+         let res;
+         let history = [];
+        
 
+         //   console.log();
 
       bloc_btn.addEventListener("click",(event)=>{
       if(!event.target.classList.contains("btn")) return;
@@ -42,16 +47,20 @@ if(window.innerWidth < 500) mobil_version();
                case "=":
                      if(result.innerText == "") result.innerText = "";
                    
-                     else{
-                      
-                           his.innerText = result.innerText ;
-                           result.innerText = eval(result.innerText);
-                           history  += `
-                              <li class="li">${his.innerText}<br>
-                                    <span>${result.innerText}</span>
-                              </li>`
-                           histroylist.innerHTML  = history;  
-                           if(his.innerText.length > 12)  his.style.fontSize = "0.9em";
+                     else{   
+
+                           his.innerText = result.innerText;
+                           
+                           resull =   result.innerText = eval(result.innerText);
+                           history.push(`<li ><span>&bull;</span>${his.innerText}<br>= ${resull}</li>`);
+
+                           for(let i = 0; i<history.length; i++){ 
+                              ul.innerHTML += history[i];
+                              history.length = "";
+                      }
+
+                     if(his.innerText.length > 12)  his.style.fontSize = "0.9em";
+                  
                          }
                            break;
                case "+": if(result.innerText == "") result.innerText = "";  
@@ -82,7 +91,8 @@ if(window.innerWidth < 500) mobil_version();
             text_scale(result,13,"1.5em");
             text_scale(result,14,"1.4em");
             text_scale(result,15,"1.3em");
-            text_scale11(result,10,"1.8em");        
+            text_scale11(result,10,"1.8em");   
+              
       });
       function text_scale(tex  ,numberr, em){
 
@@ -107,6 +117,8 @@ if(window.innerWidth < 500) mobil_version();
             display.style.display = block2;
             bloc_history.style.display = block3;
       }
+
+      btn_clear.addEventListener("click",()=>{ ul.innerHTML = history.length = ""; });
 
    }
 
