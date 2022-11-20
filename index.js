@@ -108,15 +108,16 @@ if(window.innerWidth < 500) mobil_version();
             result.style.lineHeight = "101px";
          }
       }
-      btn_history.addEventListener("click",()=> { turn_on_connect_block("none","none","block"); });
+      btn_history.addEventListener("click",()=> { turn_on_connect_block("none","none","block","block"); });
 
-      btn_back.addEventListener("click",()=> { turn_on_connect_block("block","block","none"); });
+      btn_back.addEventListener("click",()=> { turn_on_connect_block("block","block","none","none"); });
 
-      function turn_on_connect_block(block1,block2,block3){
+      function turn_on_connect_block(block1,block2,block3 ,block4){
             bloc_btn.style.display = block1;
             display.style.display = block2;
             bloc_history.style.display = block3;
-      }
+            h1.style.display = block4;
+      };
 
       btn_clear.addEventListener("click",()=>{ ul.innerHTML = history.length = ""; });
 

@@ -91,6 +91,8 @@ let value;
             }
 
         }
+        fun
+    
     }
 
 function wit() { let fun ="функция 2";}
