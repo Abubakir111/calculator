@@ -34,6 +34,9 @@ if(window.innerWidth < 500) mobil_version();
             value = event.target.innerText;
             
             switch(value){
+               case "AC":
+                     result.innerText = "";
+                     his.innerText =  "";   
                case "C":
                      result.innerText =  result.innerText.substring(0,result.innerText.length-1);
                      result.innerText = result.innerText;
