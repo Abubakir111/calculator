@@ -48,9 +48,7 @@ calc.addEventListener("dragend",(event)=>{
                     if(result.innerText == "")  result.innerText == "";
                     else{
 
-                        his.style.color = "rgb(143, 139, 139)";
-                        his.innerText = result.innerText ;
-                        result.innerText = eval(result.innerText);  
+                                                                            
                         if(his.innerText.length > 12) his.style.fontSize = "0.9em";
                     }
                     break;

@@ -268,10 +268,11 @@ body{
     width: 20%;
     height: 14%;
     border-radius: 50%;
-    background:#2f3030;
+    background:#f8d704;
     text-align: center;
     line-height: 195%;
     cursor: pointer;
+     color: #232424;;
     font-size: 1.1em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     user-select: none;
@@ -284,7 +285,7 @@ body{
     width: 68%;
     height: 13%;
     border-radius: 30px;
-    background: #2f3030;
+    background: #f8d704;
     text-align: center;
     line-height: 181%;
     cursor: pointer;
@@ -292,6 +293,7 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     user-select: none;
     margin: 6% 3% 0% 2%;
+    color: #232424;
     float: left;
 }
 .btn_d{
@@ -326,14 +328,14 @@ body{
 }
 
 .lightGrey{
-    background:#bbbaba;
+    background:#f00707;
     color: #232424;
     font-size: 0.7em;
     line-height: 67px;
     font-weight: bold;
 }
 .orange{
-    background: #e1a713;
+    background: #13e135;
     line-height: 67px;
     font-size: 1em;
 } 
