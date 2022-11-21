@@ -1,13 +1,33 @@
-  
-  
  function browser_version(){
-
+let calc = document.querySelector(".calc");
 let bloc_btn = document.querySelector(".btnContent");
 let result = document.querySelector(".val");
 let his = document.querySelector(".history");
+let AC = document.querySelector(".AC");
+let C = document.querySelector(".C");
+AC.innerText = "C";
+C.innerText = "%";
 let value;
+let offsetX,offsetY;
+ 
+calc.addEventListener("dragstart",(event)=>{
+  
+        console.log(event.offsetX,event.offsetY);
+         offsetX = event.offsetX;
+         offsetY = event.offsetY;
+    
+  });
 
+calc.addEventListener("dragend",(event)=>{
+    if(event.target.classList.contains("btn")){
+        return;
+    }else{
 
+        console.log(event.pageX,event.pageY);
+        calc.style.top = (event.pageY - offsetY) + "px";
+        calc.style.left = (event.pageX - offsetX) + "px";
+    }
+});
         bloc_btn.addEventListener("click",(event)=>{
             if(!event.target.classList.contains("btn")) return;
             value = event.target.innerText;
